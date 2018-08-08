@@ -1,0 +1,191 @@
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #bff3e8 inset;
+}
+
+body {
+    background-color: white;
+    height: 100vh; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 14%;
+    padding-bottom: 3%;
+}
+
+form button {
+    margin-top: 4%;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background: linear-gradient(#a3bded, #6991c7);
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+}
+
+
+input {
+    height: 4.5rem;
+    background-color: white;
+}
+
+input:focus {
+    background-color: #bff3e8 ;
+}
+
+.login-form {
+    height: 74rem;
+    margin-left: 35%;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #a3bded;
+}
+
+.login-form h2 {
+    margin-left: 36%;
+    color: white; 
+    font-size: 40px;
+    font-family: 'Neucha', cursive;
+}
+
+.logo {
+    display: flex;
+    padding-bottom: 1%;
+}
+
+h1 {
+    color: #a3bded;
+    margin-left: 38%;
+}
+
+h1 span {
+    font-family: 'Neucha', cursive;
+    font-size: 70px; 
+}
+
+#booked {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 72px;
+}
+
+.fa { 
+    position: absolute;
+    margin-left: 17%;
+}
+
+#icon-name {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 1%;
+}
+
+#icon-email {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 5.5%;
+}
+
+#icon-image {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 14%;
+}
+
+#icon-username {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 18.5%;
+}
+
+#icon-password {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 23%;
+}
+
+
+.service-opt {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    padding-right: 4%;
+    color: white;
+    font-size: 14px;
+}
+
+#yes, #no {
+    margin-top: -4.2%;
+}
+
+article {
+    padding-right: 2rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+.disclaimer-div {
+    width: 95%;
+    text-align: center;
+    padding-bottom: 6%;
+}
+
+#disclaimer {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 1%;
+  }
+
+  .pink {
+      background-color: #fa7c92;
+      /* margin-top: 7%; */
+      /* margin-left: -15%;
+      margin-right: 0; */
+      box-shadow: 5px 5px 5px grey;
+    }
+
+    .blue {
+      background-color: #a3bded;
+      /* margin-top: 7%; */
+      /* margin-left: -10%;
+      margin-right: 0; */
+      box-shadow: 5px 5px 5px grey;
+    }
+
+  .green {
+    background-color: #66ab8c;
+    /* margin-top: 7%; */
+    /* margin-right: 0;
+    margin-left: 16%; */
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  .white {
+      background-color: rgb(199, 196, 185);
+      /* margin-top: 7%; */
+      /* margin-right: 0;
+      margin-left: 10%; */
+      box-shadow: 5px 5px 5px grey;
+  } 
+
+  .dots {
+      display: flex;
+      flex-direction: row;
+      width: 290px;
+      margin-left: 40.2%;
+      justify-content: space-around;
+      margin-bottom: 2%;
+  }

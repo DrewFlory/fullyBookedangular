@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+<div *ngIf= "theActualUser.username">
+  <p>You are now logged in as:  {{loginUser.username}} </p>
+</div>
+
+  <div class="logo">
+    <h1><span>fully</span><span id="booked">Booked</span></h1>
+    <span id="easy">Freelancing made easy...</span>
+  </div>
+      <span class="blue dot"></span>
+      <span class="pink dot"></span>
+      <span class="white dot"></span>
+      <span class="green dot"></span>
+  
+
+<div class="login-form">
+  <h2>Login</h2>
+    <br>
+    <form (submit)="tryToLogIn()">
+      <input type="text" [(ngModel)]= "loginUser.username" name= "user" placeholder= "username">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <br>
+      <input type="password" [(ngModel)]="loginUser.password" name="user" placeholder="password">
+      <i class="fa fa-lock" id="icon-password" aria-hidden="true"></i>
+      <br>
+        <button>LOGIN</button>
+        <span>Not a member? <a [routerLink]="['signup']">Sign up now</a></span>
+    </form>
+</div>
+
+<div *ngIf= "theError">{{theError}}</div>
+
+</body>
+</html>

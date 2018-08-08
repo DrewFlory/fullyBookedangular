@@ -1,0 +1,61 @@
+
+
+
+<div class="nav">
+  <ul>
+    <li><a>Home</a></li>
+    <li><a>Booked Appointments</a></li>
+    <li><a>Logout</a></li>
+  </ul>
+</div>
+  <h1><span>fully</span><span id="booked">Booked</span></h1>
+
+  <form (submit)= "editUser()">
+    <div class="service-form">
+        <h3>Edit Service</h3>
+        <input type="text" [(ngModel)]= "theActualUser.name" name= "user" placeholder= "name">
+        <i class="fa fa-user-circle" id="icon-name" aria-hidden="true"></i>
+        <br>
+      <input type="text" [(ngModel)]= "theActualUser.email" name= "user"  placeholder= "email">
+        <i class="fa fa-envelope" id="icon-email"  aria-hidden="true"></i>
+        <br>
+        <div class= "service-dropdown">
+            <select class="selectpicker" [(ngModel)]= "theActualUser.location" name="blah" title="Choose City">
+              <option value= "Boca Raton">Boca Raton</option>
+              <option value= "Coral Gables">Coral Gables</option>
+              <option value= "Coral Springs">Coral Springs</option>
+              <option value= "Davie">Davie</option>
+              <option value= "Fort Lauderdale">Fort Lauderdale</option>
+              <option value= "Hialeah">Hialeah</option>
+              <option value= "Hollywood">Hollywood</option>
+              <option value= "Lauderhill">Lauderhill</option>
+              <option value= "Miami">Miami</option>
+              <option value= "Miramar">Miramar</option>
+              <option value= "Opa-locka">Opa-Locka</option>
+              <option value= "Pembroke Pines">Pembroke Pines</option>
+              <option value= "Plantation">Plantation</option>
+              <option value= "Pompano">Pompano</option>
+              <option value= "Tamarac">Tamarac</option>
+              <option value= "West Palm Beach">West Palm Beach</option>
+              <option value= "Weston">Weston</option>
+            </select>
+        </div>
+        <!-- <input type="text" name="user" placeholder="imageURL">
+        <i class="fa fa-file-image-o" id="icon-image" aria-hidden="true"></i>
+        <br> -->
+ 
+      <input type="text" [(ngModel)]= "theActualUser.username" name="user"  placeholder="username">
+        <i class="fa fa-user" id="icon-username" aria-hidden="true"></i>
+        <br>
+
+        <input type="text" name= "instagram" [(ngModel)]= "theActualUser.instagram" placeholder= "instagram URL">
+        <input type="text" name= "twitter" [(ngModel)]= "theActualUser.twitter" placeholder= "twitter URL">
+        <input type="text" name= "linkedin" [(ngModel)]= "theActualUser.linkedin" placeholder= "linkedIn URL">
+
+        <button>Submit</button>
+      </div>
+
+</form>
+
+
+
