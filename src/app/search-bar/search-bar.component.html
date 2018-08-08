@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -21,7 +22,8 @@
         <h2>Find Your Freelancer</h2>
         <div class="search-area">
           <div class= "service-dropdown">
-              <select class="selectpicker" name= "category" title="Category">
+              <select class="select" name= "category" title="Category">
+                <option selected hidden>Choose Category</option>
                 <option value= "Accounting">Accounting</option>
                 <option value= "Acting">Acting</option>
                 <option value= "Advertising">Advertising</option>
@@ -61,7 +63,6 @@
           <div class="users-info">
             <h4>{{oneUser.name}}</h4>
             <p>{{oneUser.location}}</p>
-            <p>{{oneUser.description}}</p>
         </div>
         </div>
       </div>

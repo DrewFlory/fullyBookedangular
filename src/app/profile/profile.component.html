@@ -14,7 +14,8 @@
           <li><a>Logout</a></li>
           <li><a [routerLink]= "['search']">Search</a></li>
         </ul>
-      </div>
+    </div>
+
         <h1><span>fully</span><span id="booked">Booked</span></h1>
 
       
@@ -22,7 +23,10 @@
               <i (click) = "updateUser()" class="fa fa-pencil-square-o fa-2x" id="edit" aria-hidden="true"></i>
               
               <div *ngIf="theActualUser.username" class="user-info">
-                  <h3>{{theActualUser.name}}</h3>
+                  <h4>{{theActualUser.name}}</h4>
+                  <br>
+                  <span id="description">{{theActualUser.description}}</span>
+                  <br>
                   <span><i class="fa fa-envelope" id= "email-icon" aria-hidden="true"></i>{{theActualUser.email}}</span>
                   <span><i class="fa fa-map-marker" id="marker" aria-hidden="true"></i>
                     {{theActualUser.location}}</span>
@@ -36,10 +40,6 @@
 
           </div>
 
-  <div *ngIf = "theActualUser.service">
-
-
-  </div>
     <div class="body-sec">
         <div *ngIf = "theActualUser.service">
           <div class="services">
@@ -56,8 +56,7 @@
                 <br>
                 <a [routerLink]= "[ 'services', oneJob._id]">Details</a>
             </div>
-                <!-- <button (click)="deleteJob()" class="button1">Delete</button> -->
-              </div>
+            </div>
           </div>
 
           </div>
@@ -69,13 +68,8 @@
 
         </div>
         <div *ngIf = "theActualUser.service">
-
         <div class="schedule">
           <div class="schedule-help">
-
-
-  
-
             <h4>Schedule</h4>
 
               <i data-toggle="modal" data-target="#myModal" class="fa fa-question-circle fa-2x" id="question"></i>
@@ -104,9 +98,8 @@
               </div>
             </div>
           </div>
-          </div>
+
             <div class="days">
-<div *ngIf = "theActualUser.service">
               <div class="monday">
               <h4>Monday</h4>
               <div class="scroll">
@@ -169,10 +162,9 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
-
+      </div>
       
 
 

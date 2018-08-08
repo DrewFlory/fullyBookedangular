@@ -20,7 +20,7 @@
         <i class="fa fa-envelope" id="icon-email"  aria-hidden="true"></i>
         <br>
         <div class= "service-dropdown">
-            <select class="selectpicker" [(ngModel)]= "theActualUser.location" name="blah" title="Choose City">
+            <select class="select" [(ngModel)]= "theActualUser.location" name="blah" title="Choose City">
               <option value= "Boca Raton">Boca Raton</option>
               <option value= "Coral Gables">Coral Gables</option>
               <option value= "Coral Springs">Coral Springs</option>
@@ -47,11 +47,14 @@
       <input type="text" [(ngModel)]= "theActualUser.username" name="user"  placeholder="username">
         <i class="fa fa-user" id="icon-username" aria-hidden="true"></i>
         <br>
-
+        <textarea name="description" maxlength="185" [(ngModel)]= "theActualUser.description" placeholder="Brief description of yourself" id="" cols="30" rows="10"></textarea>
+        <br>
         <input type="text" name= "instagram" [(ngModel)]= "theActualUser.instagram" placeholder= "instagram URL">
+        <br>
         <input type="text" name= "twitter" [(ngModel)]= "theActualUser.twitter" placeholder= "twitter URL">
+        <br>
         <input type="text" name= "linkedin" [(ngModel)]= "theActualUser.linkedin" placeholder= "linkedIn URL">
-
+        <br>
         <button>Submit</button>
       </div>
 

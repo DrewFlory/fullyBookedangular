@@ -1,4 +1,4 @@
 export const environment = {
-  baseURL: "http://fully-booked.herokuapp.com",
+  baseURL: "https://fully-booked.herokuapp.com",
   production: true
 };
