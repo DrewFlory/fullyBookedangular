@@ -11,10 +11,11 @@
 
     <div class="nav">
         <ul>
-          <li><a>Home</a></li>
-          <li><a>Booked Appointments</a></li>
-          <li><a>Logout</a></li>
-          <li><a [routerLink]= "['search']">Search</a></li>
+            <li><a [routerLink]= "['/private/profile']">Home</a></li>
+            <li><a>Appointments</a></li>
+          <li><a [routerLink]= "['/private/profile/search']">Search</a></li>
+          <li><a [routerLink]= "['']">Logout</a></li>
+
         </ul>
       </div>
         <h1><span>fully</span><span id="booked">Booked</span></h1>
@@ -22,7 +23,8 @@
         <h2>Find Your Freelancer</h2>
         <div class="search-area">
           <div class= "service-dropdown">
-              <select class="select" name= "category" title="Category">
+            <span>Choose Category: </span>
+              <select (change) = "searchUsers($event)" [(ngModel)]= "theSearchedCategory" class="select" name= "category" title="Category">
                 <option selected hidden>Choose Category</option>
                 <option value= "Accounting">Accounting</option>
                 <option value= "Acting">Acting</option>
@@ -54,18 +56,35 @@
                 <option value= "Web Design">Web Design</option>
               </select>
           </div> 
-          <input type="text" placeholder="What are you looking for?..">
         </div>
-  
-      <div class="users-section">
+      
+      
+      <div *ngIf = "filteredArray.length > 0" class="users-section">
        <div class="user-body">
-        <div *ngFor = "let oneUser of arrayOfUsers" class="users">
+        <div *ngFor = "let oneUser of filteredArray" class="users">
           <div class="users-info">
+            
+            <img [src]="['https://graceumcseattle.org/wp-content/uploads/2016/12/headshot-400.png']" alt="">
             <h4>{{oneUser.name}}</h4>
             <p>{{oneUser.location}}</p>
+
         </div>
         </div>
       </div>
       </div>
+
+      <div *ngIf = "filteredArray.length < 1" class="users-section">
+          <div class="user-body">
+           <div *ngFor = "let oneUser of arrayOfUsers" class="users">
+             <div class="users-info">
+                <img [src]="['https://graceumcseattle.org/wp-content/uploads/2016/12/headshot-400.png']" alt="">
+               <h4>{{oneUser.name}}</h4>
+               <p>{{oneUser.location}}</p>
+               <a [routerLink]= "['/private/profile/', oneUser._id]">View Profile</a>
+           </div>
+           </div>
+         </div>
+        </div>
+
 </body>
 </html>

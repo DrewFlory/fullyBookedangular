@@ -1,0 +1,92 @@
+.nav {
+    height: 4.5rem;
+}
+
+body {
+    background-color: white;
+    height: 110vh;
+}
+
+h1 {
+    color: #a3bded;
+    margin-left: 87%;
+    margin-top: -3.1%;
+}
+
+h1 span {
+    font-family: 'Neucha', cursive;
+    font-size: 26px; 
+}
+
+#booked {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 33px;
+}
+
+input {
+    height: 3.5rem;
+    width: 23rem; 
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    list-style: none;
+    margin-right: 3rem;
+    margin-top: 1%;
+}
+
+li a {
+    color: #a3bded;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.service-form {
+    background-color: #a3bded;
+    padding: 50px;
+    height: 45rem;
+    width: 40rem;
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-left: 35%;
+    border: 1px solid #a3bded;
+}
+.service-form h3 {
+    color: white;
+    margin-left: 18%;
+    margin-top: 0;
+
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.service-form input {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 7%;
+}
+
+.service-form button {
+    margin-top: 4%;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background: linear-gradient(#a3bded, #6991c7);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.select {
+    height: 3.5rem;
+    width: 20rem;
+    background-color: white;
+}
+label {
+    font-family: 'Quicksand', sans-serif;
+
+}

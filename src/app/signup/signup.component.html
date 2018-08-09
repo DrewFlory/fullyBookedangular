@@ -12,10 +12,10 @@
   <h1><span>fully</span><span id="booked">Booked</span></h1>
 
   <div class= "dots">
-      <span class="pink dot"></span>
+      <span class="black dot"></span>
     <span class="blue dot"></span>
-    <span class="white dot"></span>
     <span class="green dot"></span>
+    <span class="white dot"></span>
 </div>
 <!-- </div>  -->
   <!-- <div *ngFor = "let oneLocation of arrayOfLocations">
@@ -28,13 +28,13 @@
     <br>
     <form (submit)="tryToSignUp()">
       <input type="text" [(ngModel)]= "signUpUser.name" name= "user" placeholder= "name">
-        <i class="fa fa-user-circle" id="icon-name" aria-hidden="true"></i>
         <br>
       <input type="text" [(ngModel)]= "signUpUser.email" name= "user" placeholder= "email">
-        <i class="fa fa-envelope" id="icon-email"  aria-hidden="true"></i>
         <br>
         <div class= "service-dropdown">
-            <select class="selectpicker" [(ngModel)]= "signUpUser.location" name="blah" title="Choose City">
+          <label>Choose Location</label>
+            <select [(ngModel)]= "signUpUser.location" name="drop" class="select" title="Choose City">
+            <option selected hidden>Choose Location</option>
               <option value= "Boca Raton">Boca Raton</option>
               <option value= "Coral Gables">Coral Gables</option>
               <option value= "Coral Springs">Coral Springs</option>
@@ -56,14 +56,11 @@
         </div>
         <br>
       <input type="text" name="user" placeholder="imageURL">
-        <i class="fa fa-file-image-o" id="icon-image" aria-hidden="true"></i>
         <br>
  
       <input type="text" [(ngModel)]="signUpUser.username" name="user" placeholder="username">
-        <i class="fa fa-user" id="icon-username" aria-hidden="true"></i>
         <br>
       <input type="password" [(ngModel)]="signUpUser.password" name="user" placeholder="password">
-        <i class="fa fa-lock" id="icon-password" aria-hidden="true"></i>
         <br>
         <div class="service-opt">
           <p>Are you a freelancer?</p> 

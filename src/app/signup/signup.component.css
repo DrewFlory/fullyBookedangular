@@ -149,8 +149,8 @@ article {
     margin-top: 1%;
   }
 
-  .pink {
-      background-color: #fa7c92;
+  .black {
+      background-color: black;
       /* margin-top: 7%; */
       /* margin-left: -15%;
       margin-right: 0; */
@@ -166,7 +166,7 @@ article {
     }
 
   .green {
-    background-color: #66ab8c;
+    background-color: #98A148;
     /* margin-top: 7%; */
     /* margin-right: 0;
     margin-left: 16%; */
@@ -189,3 +189,9 @@ article {
       justify-content: space-around;
       margin-bottom: 2%;
   }
+
+  .select {
+    height: 3.5rem;
+    width: 20rem;
+    background-color: white;
+}

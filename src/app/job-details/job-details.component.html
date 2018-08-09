@@ -1,10 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 
-    <h4>{{theActualEntry.category}}</h4>
-    <span>{{theActualEntry.description}}</span>
-    <br>
-    <span>{{theActualEntry.pricing}}</span>
-    <br>
+    <div class="nav">
+        <ul>
+          <li><a [routerLink] = "['/private/profile']">Home</a></li>
+          <li><a>Appointments</a></li>
+          <li><a [routerLink] = "['']">Logout</a></li>
 
-    <a [routerLink]="[ 'edit']">Edit Service</a>
-    <button (click)="deleteJob()" class="button1">Delete</button>
+        </ul>
+    </div>
+        <h1><span>fully</span><span id="booked">Booked</span></h1>
+
+    <div class="job-details">
+        <h4>{{theActualEntry.category}}</h4>
+        <span>{{theActualEntry.description}}</span>
+        <br>
+        <span>{{theActualEntry.pricing}}</span>
+        <br>
+    
+        <a [routerLink]="[ 'edit']">Edit</a>
+        <br>
+        <button (click)="deleteJob()" class="button1">Delete</button>
+    </div>
+
+
+</body>
+</html>
 

@@ -13,6 +13,8 @@ import { JobDetailsComponent } from './job-details/job-details.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
 import { UpdateUserInfoComponent } from './update-user-info/update-user-info.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FindUserComponent } from './find-user/find-user.component';
+
 
 
 
@@ -25,7 +27,9 @@ const routes:Routes = [
   { path: 'private/profile/services/:id', component: JobDetailsComponent },
   { path: 'private/profile/services/:id/edit', component: EditJobComponent },
   { path: 'private/profile/edituser/:id', component:  UpdateUserInfoComponent },
-  { path: 'private/profile/search', component: SearchBarComponent }
+  { path: 'private/profile/search', component: SearchBarComponent },
+  { path: 'private/profile/:id', component: FindUserComponent },
+  
 ]
 
 @NgModule({
@@ -39,6 +43,7 @@ const routes:Routes = [
     EditJobComponent,
     UpdateUserInfoComponent,
     SearchBarComponent,
+    FindUserComponent,
     
   ],
   imports: [

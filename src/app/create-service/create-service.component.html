@@ -9,9 +9,9 @@
 <body>
   <div class="nav">
     <ul>
-      <li><a>Home</a></li>
-      <li><a>Booked Appointments</a></li>
-      <li><a>Logout</a></li>
+      <li><a [routerLink] = "['/private/profile']">Home</a></li>
+      <li><a>Appointments</a></li>
+      <li><a [routerLink] = "['']">Logout</a></li>
     </ul>
   </div>
     <h1><span>fully</span><span id="booked">Booked</span></h1>
@@ -19,12 +19,13 @@
       <div class="service-form">
           <h3>Create Service</h3>
           <div class= "service-dropdown">
-              <select class="selectpicker" [(ngModel)]= "newServiceInfo.category" name= "category" title="Category">
+            <label>Choose Category</label>
+              <select class="select" [(ngModel)]= "newServiceInfo.category" name= "category" title="Category">
                 <option value= "Accounting">Accounting</option>
                 <option value= "Acting">Acting</option>
                 <option value= "Advertising">Advertising</option>
                 <option value= "Audio Production">Audio Production</option>
-                <option value= "Ausiness Writing">Business Writing</option>
+                <option value= "Business Writing">Business Writing</option>
                 <option value= "Cooking">Cooking</option>
                 <option value= "Computer Programming">Computer Programming</option>
                 <option value= "Creative Writing">Creative Writing</option>

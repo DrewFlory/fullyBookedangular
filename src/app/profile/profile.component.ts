@@ -98,15 +98,13 @@ export class ProfileComponent implements OnInit {
       res =>{this.successCallback(res)},
       err =>{this.errorCallback(null)}
     )
-
-    
-
   }
 
-  // editJobs(){
-  //   this.bookedService.editJobs()
+  logout() {
+    this.checkIfLoggedIn();
+    this.bookedService.logout();
+  }
 
-  // }
   deleteJob(){
     this.theRouter.params
     .subscribe((params) => {
@@ -116,6 +114,9 @@ export class ProfileComponent implements OnInit {
       })
     })
   }
+
+
+
 
   addSlot(index, day, e){
     if(this.weeklySchedule[day][index].value){

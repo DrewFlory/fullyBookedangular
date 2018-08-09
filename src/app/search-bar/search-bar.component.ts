@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookedService } from '../services/booked.service'
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,13 +11,31 @@ import { BookedService } from '../services/booked.service'
 })
 export class SearchBarComponent implements OnInit {
 
+  theSearchedCategory: String;
   arrayOfUsers:Array<any> = [];
   theError:any;
+  filteredArray:Array<any> = [];
+  filteredUser:Array<any> = [];
 
-  constructor(private bookedService: BookedService) { }
+  constructor(private bookedService: BookedService,
+    private router : Router,
+    private myRoutes : ActivatedRoute ) { }
 
   ngOnInit() {
     this.getUsers();
+  }
+
+  searchUsers(event){
+
+this.filteredArray = this.arrayOfUsers.filter((oneUser)=>{
+
+if (
+  oneUser.categories.includes(this.theSearchedCategory)
+  ){
+    return oneUser;
+
+}
+    })
   }
 
   getUsers(){
@@ -25,5 +45,7 @@ export class SearchBarComponent implements OnInit {
       (err)=>{this.theError = err}
     )
   }
+
+
 
 }

@@ -157,8 +157,8 @@ h1 span {
   }
 
   
-  .pink {
-      background-color: #fa7c92;
+  .black {
+      background-color: black;
       margin-left: -27%;
       margin-right: 0;
       box-shadow: 5px 5px 5px grey;
@@ -172,7 +172,7 @@ h1 span {
     }
 
   .green {
-    background-color: #66ab8c;
+    background-color: #98A148;
     margin-left: -15%;
     margin-right: 0;
     box-shadow: 5px 5px 5px grey;

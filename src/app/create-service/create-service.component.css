@@ -44,7 +44,7 @@ li {
 
 li a {
     color: #a3bded;
-    font-family: 'Istok Web', sans-serif;  
+    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     text-decoration: none;
 }
@@ -66,9 +66,9 @@ form {
     color: white;
     margin-left: 18%;
     margin-top: 0;
-    padding-bottom: 10%;
+    padding-bottom: 0%;
     font-size: 30px;
-    font-family: 'Istok Web', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .service-form input {
@@ -84,5 +84,17 @@ form {
     border-radius: 5px;
     background: linear-gradient(#a3bded, #6991c7);
     color: white;
-    font-family: 'Istok Web', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.select {
+    height: 3.5rem;
+    width: 20rem;
+    background-color: white;
+}
+
+label {
+
+   font-family: 'Quicksand', sans-serif;
+
 }

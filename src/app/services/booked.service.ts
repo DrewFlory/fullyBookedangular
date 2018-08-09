@@ -14,6 +14,7 @@ import { environment } from '../../environments/environment'
 export class BookedService {
 
   baseURL:any = environment.baseURL;
+  allTheUsers:any = [];
 
   constructor(private http:Http) { }
 
@@ -69,6 +70,12 @@ export class BookedService {
     .map((res)=> res.json);
   }
 
+  getProfileJobs(userID){
+    return this.http.get(`${this.baseURL}/api/private/userjobs/${userID}`, {withCredentials: true})
+    .map(res => res.json())
+    .catch(this.handleError);
+  }
+
   getJobs(){
     return this.http.get(`${this.baseURL}/api/private/userjobs`, {withCredentials: true})
     .map(res => res.json())
@@ -85,6 +92,12 @@ export class BookedService {
     .catch(this.handleError);
   }
 
+  bookAppt(userID, index, day){
+    return this.http.post(`${this.baseURL}/api/private/profile/${userID}/bookappt`, {index: index, day: day},{withCredentials: true})
+    .map(res => res.json())
+    .catch(this.handleError);
+  }
+
   removeSlot(index, day) {
     return this.http.post(`${this.baseURL}/api/private/removetimes`, {index: index, day: day},{withCredentials: true})
     .map(res => res.json())
@@ -94,6 +107,13 @@ export class BookedService {
   search() {
     return this.http.get(`${this.baseURL}/api/private/profile/search`, {withCredentials: true})
     .map(res => res.json())
+    .catch(this.handleError)
+  }
+
+  findUser(userID) {
+    return this.http.get(`${this.baseURL}/api/private/profile/${userID}`, {withCredentials: true})
+    .map(res => {
+      return res.json()})
     .catch(this.handleError)
   }
 
