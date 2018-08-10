@@ -10,7 +10,7 @@
     <div class="nav">
         <ul>
           <li><a [routerLink] = "['/private/profile']">Home</a></li>
-          <li><a>Appointments</a></li>
+          <li><a [routerLink] = "['/private/profile']">Appointments</a></li>
           <div *ngIf = "!theActualUser.service" id="search">
           <li><a [routerLink]= "['/private/profile/search']">Search</a></li>
         </div>
@@ -68,12 +68,34 @@
 
           </div>
  
-          
-          <div class="appointments">
+          <div *ngIf = "theActualUser.service" id="search">
+            <div class="appointments">
             <h4>Appointments</h4>
+            <div class="div">
+              <div *ngFor = "let oneAppt of theActualUser.myAppointments" class="the-job">
+                  <p>{{oneAppt.day}}</p>
+                <h6>{{oneAppt.time}}</h6>
+                <h6>Freelancer: {{oneAppt.profileName}}</h6>
+              </div>
+              </div>
+            </div>
           </div>
 
-        </div>
+          <div *ngIf = "!theActualUser.service" id="search-user">
+              <div  class="user-appointments">
+              <h4>Appointments</h4>
+              <div class="user-div">
+                <div *ngFor = "let oneAppt of theActualUser.myAppointments" class="user-job">
+                  <p>{{oneAppt.day}}</p>
+                  <h6>{{oneAppt.time}}</h6>
+                  <h6>Freelancer: {{oneAppt.profileName}}</h6>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+
+ 
         <div *ngIf = "theActualUser.service">
         <div class="schedule">
           <div class="schedule-help">

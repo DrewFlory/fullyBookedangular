@@ -21,7 +21,6 @@
 
       
           <div class="profile">
-              <i (click) = "updateUser()" class="fa fa-pencil-square-o fa-2x" id="edit" aria-hidden="true"></i>
               
               <div class="user-image">
                   <img [src]="['https://graceumcseattle.org/wp-content/uploads/2016/12/headshot-400.png']" alt="">
@@ -119,7 +118,7 @@
                 <div class="scroll">
                 <div *ngFor= "let oneDay of theActualUser.weeklySchedule.tuesday; let i = index" class="tuesday-time">
                     <div *ngIf = "oneDay.value" class="button">
-                      <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                      <button (click)= "bookAppt(theActualUser, i, 'tuesday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                     </div>
                 </div>
               </div>
@@ -130,7 +129,7 @@
                 <div class="scroll">
                 <div *ngFor= "let oneDay of theActualUser.weeklySchedule.wednesday; let i = index" class="wednesday-time">
                     <div *ngIf = "oneDay.value" class="button">
-                    <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                    <button (click)= "bookAppt(theActualUser, i, 'wednesday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                     </div>
                 </div>
               </div>
@@ -141,7 +140,7 @@
                   <div class="scroll">
                   <div *ngFor= "let oneDay of theActualUser.weeklySchedule.thursday; let i = index" class="thursday-time">
                       <div *ngIf = "oneDay.value" class="button">
-                      <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                      <button (click)= "bookAppt(theActualUser, i, 'thursday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                       </div>
                   </div>
               </div>
@@ -152,7 +151,7 @@
                   <div class="scroll">
                   <div *ngFor= "let oneDay of theActualUser.weeklySchedule.friday; let i = index" class="friday-time">
                       <div *ngIf = "oneDay.value" class="button">
-                      <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                      <button (click)= "bookAppt(theActualUser, i, 'friday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                       </div>
                   </div>
               </div>
@@ -163,7 +162,7 @@
                   <div class="scroll">
                   <div *ngFor= "let oneDay of theActualUser.weeklySchedule.saturday; let i = index" class="saturday-time">
                       <div *ngIf = "oneDay.value" class="button">
-                      <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                      <button (click)= "bookAppt(theActualUser, i, 'saturday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                       </div>
                   </div>
               </div>
@@ -174,7 +173,7 @@
                   <div class="scroll">
                   <div *ngFor= "let oneDay of theActualUser.weeklySchedule.sunday; let i = index" class="sunday-time">
                       <div *ngIf = "oneDay.value" class="button">
-                      <button (click)= "bookAppt(theActualUser, i, 'monday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
+                      <button (click)= "bookAppt(theActualUser, i, 'sunday', $event)" [ngClass]="{unavailable: !oneDay.value , available:oneDay.value }">{{oneDay.time}}</button>
                         </div>
                   </div>
                 </div>

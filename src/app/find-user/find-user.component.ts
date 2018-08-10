@@ -82,8 +82,10 @@ export class FindUserComponent implements OnInit {
 
         this.bookedService.getProfileJobs(params['id'])
 
-        .subscribe((arrayOfJobs)=>{
+        .subscribe((arrayOfJobs) =>{
           console.log(arrayOfJobs)
+          this.arrayOfJobs = arrayOfJobs
+
           // (res)=>{this.arrayOfJobs = res}
           // (err)=>{this.theError = err}
 
@@ -113,22 +115,15 @@ export class FindUserComponent implements OnInit {
 
     bookAppt(theActualUser, index, day, e){
     
-      // console.log('hello')
-  
-      if(this.weeklySchedule[day][index].value){
-        this.bookedService.bookAppt(this.theActualUser._id, index, day)
-        .subscribe((res)=>{
-          this.checkIfLoggedIn();
-        })
-  
-      } else {
-        this.bookedService.bookAppt(this.theActualUser._id, index, day)
-        .subscribe((res)=>{
-          this.checkIfLoggedIn()
-        })
-      }
+  this.bookedService.bookAppt(this.theActualUser._id, index, day)
+  .subscribe(()=>{
+    this.findUser();
+  })
+     
     }
 
+    
+    
     findUser(){
       this.myRoutes.params
       .subscribe((params)=>{
