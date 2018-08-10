@@ -12,9 +12,7 @@
       <ul>
           <li><a [routerLink] = "['/private/profile']">Home</a></li>
           <li><a>Appointments</a></li>
-          <div *ngIf = "!theActualUser.service" id="search">
-          <li><a [routerLink]= "['/private/profile/search']">Search</a></li>
-        </div>
+
         <li><a href="" ng-click="logout()" target="_self">Log Out</a></li>
 
         </ul>

@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class JobDetailsComponent implements OnInit {
 
   theActualEntry:any;
+  theActualUser:any = {};
+  loginUser:any={};
+  theError:any;
 
 
   constructor(private bookedService: BookedService,
@@ -28,6 +31,25 @@ export class JobDetailsComponent implements OnInit {
       })
     })
   }
+
+  successCallback(userObject){
+    this.theActualUser = userObject;
+    this.theError = '';
+  }
+
+  errorCallback(errorObject){
+    this.theError = errorObject;
+    this.theActualUser = {username:'', password:''};
+  }
+
+  checkIfLoggedIn(){
+    this.bookedService.isLoggedIn()
+    .subscribe(
+      res => {this.successCallback(res)},
+      err => {this.errorCallback(null)}
+    )
+  }
+
 
 
 
