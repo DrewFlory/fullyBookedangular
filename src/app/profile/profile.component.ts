@@ -11,8 +11,6 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-
-
   theActualUser:any = {};
   theError:any;
   freelance:Array<any> = [];
@@ -25,49 +23,49 @@ export class ProfileComponent implements OnInit {
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
     tuesday: [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
   wednesday:  [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
     thursday: [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
     friday:   [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
     saturday: [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
 
     sunday:   [{time: "12am - 1am", value: false}, {time: "1am-2am", value: false},{time: '2am-3am', value: false}, {time: '3am-4am', value: false},
               {time: '4am-5am', value: false}, {time: '5am-6am', value: false},{time: '6am-7am', value: false}, {time: '7am-8am', value: false},
               {time: '8am-9am', value: false}, {time: '9am-10am', value: false}, {time: '10am-11am', value: false}, {time: '11am-12pm', value: false}, 
               {time: '12pm-1pm', value: false}, {time: '1pm-2pm', value: false}, {time: '2pm-3pm', value: false}, {time: '3pm-4pm', value: false}, 
               {time: '4pm-5pm', value: false}, {time: '5pm-6pm', value: false}, {time: '6pm-7pm', value: false}, {time: '7pm-8pm', value: false}, 
-              {time: '8am-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
+              {time: '8pm-9pm', value: false}, {time: '9pm-10pm', value: false}, {time: '10pm-11pm', value: false}, {time: '11pm-12am', value: false}],
             };
     
 
@@ -131,6 +129,14 @@ export class ProfileComponent implements OnInit {
         this.checkIfLoggedIn();
       })
     }
+  }
+
+  clearAppt(index){
+    this.bookedService.clearAppt(index);
+    this.theActualUser.myAppointments.splice(index, 1)
+    .subscribe((res)=>{
+      this.checkIfLoggedIn()
+    })
   }
 
   updateUser(){

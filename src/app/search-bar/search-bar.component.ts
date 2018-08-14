@@ -16,6 +16,7 @@ export class SearchBarComponent implements OnInit {
   theError:any;
   filteredArray:Array<any> = [];
   filteredUser:Array<any> = [];
+  freelancers:Array<any> = [];
 
   constructor(private bookedService: BookedService,
     private router : Router,
@@ -37,6 +38,15 @@ if (
 }
     })
   }
+
+  // getUsers(){
+  //   this.freelancers = this.arrayOfUsers.filter((oneUser)=>{
+  //     console.log(oneUser.service);
+  //     if (oneUser.service) {
+  //       return oneUser;
+  //     }
+  //   })
+  // }
 
   getUsers(){
     this.bookedService.search()

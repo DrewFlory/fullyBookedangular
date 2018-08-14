@@ -72,9 +72,12 @@
             <div class="appointments">
             <h4>Appointments</h4>
             <div class="div">
-              <div *ngFor = "let oneAppt of theActualUser.myAppointments" class="the-job">
-                  <p>{{oneAppt.day}}</p>
-                <h6>{{oneAppt.time}}</h6>
+              <div *ngFor = "let oneAppt of theActualUser.myAppointments; let i = index" class="the-job">
+                <div class= "appt-info">
+                  <p class= "appt-day">{{oneAppt.day}}</p>
+                <p>{{oneAppt.time}}</p>
+                </div>
+                <button (click) = "clearAppt(i)" id = "clear">Completed</button>
               </div>
               </div>
             </div>
@@ -84,10 +87,12 @@
               <div  class="user-appointments">
               <h4>Appointments</h4>
               <div class="user-div">
-                <div *ngFor = "let oneAppt of theActualUser.myAppointments" class="user-job">
-                  <p>{{oneAppt.day}}</p>
-                  <h6>{{oneAppt.time}}</h6>
+                <div *ngFor = "let oneAppt of theActualUser.myAppointments; let i = index" class="user-job">
+                  <p class= "appt-day">{{oneAppt.day}}</p>
+                  <p>{{oneAppt.time}}</p>
                   <h6>{{oneAppt.profileName}}</h6>
+                  <button (click) = "clearAppt(i)">Completed</button>
+
                 </div>
               </div>
               </div>

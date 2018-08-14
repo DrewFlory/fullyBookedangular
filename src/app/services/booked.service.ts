@@ -117,6 +117,12 @@ export class BookedService {
     .catch(this.handleError)
   }
 
+  clearAppt(apptIndex) {
+    return this.http.post(`${this.baseURL}/api/private/profile/completedappt/${apptIndex}`, {withCredentials: true})
+    .map(res => res.json())
+    .catch(this.handleError)
+  }
+
   // getProfile(id){
   //   return this.http.post(`http://localhost:3000/api/private/profile`, {withCredentials: true})
   //     .map(res => res.json())
